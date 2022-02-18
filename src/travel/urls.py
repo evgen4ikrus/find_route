@@ -1,7 +1,7 @@
 
 from django.contrib import admin
 from django.urls import path, include
-from travel.views import home, about
+from routes.views import home, find_route
 
 
 urlpatterns = [
@@ -9,5 +9,6 @@ urlpatterns = [
     path('cities/', include(('cities.urls', 'cities'))),
     path('trains/', include(('trains.urls', 'trains'))),
     path('', home, name='home'),
-    path('about/', about)
+    path('find_route/', find_route, name='find_route'),
+    
 ]
